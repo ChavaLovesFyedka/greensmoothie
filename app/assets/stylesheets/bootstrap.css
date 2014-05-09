@@ -8,6 +8,30 @@
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
 
+.ImageBorder
+{
+    border-width: 1px;
+    border-color: Black;
+}
+
+.search-form {
+  margin-top: 11%;
+  zoom: 150%;
+}
+
+.logo {
+  font-size: 2em;
+  font: arial-black;
+  color: #228B22;
+  text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;
+  padding-bottom: 5px;
+  margin-left: -70px;
+}
+
 article,
 aside,
 details,
