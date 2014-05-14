@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Parser.new
+#Parser.new
 
 parser1 = Parser.new('./ailments.csv')
 parser1.ailments_list
@@ -14,5 +14,5 @@ parser1.ailments_list
 parser2 = Parser.new('./recipes.csv')
 parser2.recipes_list
 
-parser3 = Parser.new('./ailment_recipes.csv')
-parser3.ailment_recipe_list
+parser3 = Parser.new('./ailment_recipe.csv')
+parser3.ailmentrecipes_list
