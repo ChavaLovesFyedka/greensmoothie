@@ -26,7 +26,7 @@ class Parser
   def ailmentrecipes_list
     CSV.foreach(@file_path) do |row|
       new_row = row.join(",")     
-      id, name, ailment_id, recipe_id, created_at, updated_at  = new_row.split(",")
+      id, ailment_id, recipe_id, created_at, updated_at  = new_row.split(",")
       ailmentrecipes = AilmentRecipes.create(:id => id.strip.to_i, :ailment_id => ailment_id.strip.to_i, :recipe_id => recipe_id.strip.to_i, :created_at => created_at.to_i, :updated_at => updated_at.to_i)
     end
   end
