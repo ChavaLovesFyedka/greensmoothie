@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'font-awesome-less'
+#gem 'font-awesome-less'
 # gem "font-awesome-rails"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'

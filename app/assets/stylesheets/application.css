@@ -23,3 +23,13 @@
 
  *= require font-awesome.min
  *= require font-awesome.min.css
+
+ .search-form {
+  margin-top: 11%;
+  zoom: 150%;
+}
+
+  .search-form {
+  margin-top: 0;
+  zoom: 100%;
+  }
