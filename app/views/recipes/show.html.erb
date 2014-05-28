@@ -2,7 +2,7 @@
   <div class="result-modal">
   <p>
     <h2 class="ailment-recipe">Here is your smoothie:</h2>
-    <h2><%= link_to @recipe_name.upcase, @recipe_url, :target => "blank" %></h2>
+    <h2><%= link_to @recipe.name.upcase, @recipe.url, :target => "blank" %></h2>
   </p>
   <%= image_tag "skinny-tropical-green-smoothie.jpg", :id => "smoothie-image" %>
   
@@ -19,8 +19,8 @@
     <div class="col-md-4">
     <center>
    <p>Ingredients: </p>
-    <p><%= @recipe_name %></p><br>
-    <p><%= simple_format(@recipe_description) %></p><br>
+    <p><%= @recipe.name %></p><br>
+    <p><%= simple_format(@recipe.description) %></p><br>
     </div>
 </div>
 
