@@ -350,6 +350,19 @@ padding-left:30px;
   color: white;
 }
 
+a:link {
+COLOR: #00CC66;
+}
+a:visited {
+COLOR: #0066FF;
+}
+a:hover {
+COLOR: #FF0000;
+}
+a:active {
+COLOR: #00FF00;
+}
+
 
 
   .sec_tr {

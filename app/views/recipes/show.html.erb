@@ -78,10 +78,9 @@
 <div class="container">
 <div class="row">
  <div class="span6">
- <h1>How about this delicious...</h1>
+ <h1><%= link_to @recipe.name.upcase, @recipe.url, :target => "blank" %></h1>
  <br>
 
- <p><h4><font color="white"><%= link_to @recipe.name.upcase, @recipe.url, :target => "blank" %></h4></font>
     <p>Ingredients: </p>
     <p><%= simple_format(@recipe.description) %></p><br>
  </p>
