@@ -1,6 +1,10 @@
+#fix indentation!!!!!
+
 class RecipesController < ApplicationController
   def index
-  	      if params[:search].size == 0
+
+    affliction = nil
+  	  if params[:search].size == 0
        @recipes = []
      # elsif params[:search].--- if ailment not in db?
      #  @recipes = []
@@ -11,9 +15,7 @@ class RecipesController < ApplicationController
         #want to have a case-insensitive find_by for ActiveRecord -- change find by to where method
         if affliction = Ailment.where("lower(name) = ?", params[:search].downcase).first
           randomly_selected_recipe = affliction.recipes.sample
-        @recipe_name = randomly_selected_recipe.name
-        @recipe_url = randomly_selected_recipe.url
-        @recipe_description = randomly_selected_recipe.description
+          redirect_to randomly_selected_recipe and return #exits, doesn't continue processing
         else
           flash[:error] = "Please enter an existing ailment."
         end
@@ -22,7 +24,7 @@ class RecipesController < ApplicationController
 
       if params[:search].size == 0 || affliction.nil? # there's no recipes
         # flash[:error] = "Please enter an ailment."
-        redirect_to '/'
+        redirect_to '/'   
       else
         respond_to do |format|
           format.html { render action: "show" }
@@ -30,5 +32,8 @@ class RecipesController < ApplicationController
         end
       end
     end
+
+  def show
+    @recipe = Recipe.find(params[:id])
   end
 end
