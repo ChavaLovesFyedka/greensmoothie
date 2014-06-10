@@ -1,2 +1,294 @@
-<h1>Ailments#index</h1>
-<p>Find me in app/views/ailments/index.html.erb</p>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Green Smoothie Generator</title>
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+
+        <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+        <!--[if lt IE 9]>
+          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+
+       <!-- Include GOOGLE Webfonts -->
+
+       <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+
+
+
+
+        <!-- Include CSS Resources -->
+
+        <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+        <link href="css/theme.css" rel="stylesheet">
+        <link href="css/bootstrap/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="css/font-awesome.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+    </head>
+
+  <body>
+
+
+
+   <!-- Start Navbar -->
+
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="/">Dust off that Nutribullet, people!</a>
+          <div class="nav-collapse">
+          </li>
+            </ul>
+           <ul class="nav pull-right">
+              <li><%= link_to "Home", "/" %></li>
+              <li><a href="http://www.rebootwithjoe.com/eating/a-z-fruit-veggies">Learn</a></li>
+              <li><a href="mailto:athenspie@gmail.com">Contact</a></li>
+            </ul>
+
+
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+
+
+   <!-- End Navbar -->
+
+
+
+   <!-- Start Billboard -->
+
+    <div class="billboard">
+    <div class="container">
+    <div class="row">
+    <div class="span6">
+
+
+   <h1 style="font-weight:400;"><span style="font-weight:400;">Something vexes thee?</h1>
+           <br>
+           <p>Enter your ailment... The green smoothie generator will find a recipe for you that features ingredients shown to improve your rotten affliction.  Pineapple's <a href="http://umm.edu/health/medical/altmed/supplement/bromelain">bromelain</a> enzymes for inflammation, <a href="http://www.forbes.com/sites/melaniehaiken/2012/06/30/5-surprising-foods-that-help-you-sleep/">melatonin</a>-rich cherries for insomnia, ginger's <a href="http://health.howstuffworks.com/wellness/natural-medicine/herbal-remedies/using-ginger-to-treat-upset-stomach.htm">gingerols and shogaols</a> for upset belly... let food be thy medicine!  (Or at least a medicinal supplement.)</p>
+                  <br>
+            <div class="btn-toolbar">
+      <a href="http://www.rebootwithjoe.com/eating/a-z-fruit-veggies"><button class="btn btn-large btn-head-1"> <i style="padding-right:15px; padding-top:5px;" class="icon-leaf"></i>Health Benefits of Foods</button></a>
+      <a href="http://foodmatters.tv/articles-1/juicing-vs-blending-which-one-is-better"><button class="btn btn-large"><i style="padding-right:15px; padding-top:5px;" class="icon-star-empty"></i>Juicing vs. Blending</button></a>
+       </div>
+
+        <br>
+
+      </div>
+
+   	<div class="search-form" >
+		<h1 class="logo">Green Smoothie Generator</h1>
+
+			<img src="http://fc06.deviantart.net/fs41/i/2009/042/9/a/Ghost_in_a_Blender_by_venkman_project.jpg" alt="Juice" width="250" height="200">
+
+		<%= form_tag recipes_path, :method => :get do %>
+  		<div class="ui-widget">
+    	<%#= collection_select_tag 'name', Ailment.all, :id, :name, { include_blank: "" } %>
+      	<%= search_field_tag :search, params[:search], id: "tags", class: "search-query", size: "50", :placeholder => "Select an ailment" %>
+      	<%= submit_tag "Search", :name => nil, class: "btn btn-danger btn-lg", id: "search-submit" %>
+	    	<div>
+	      	<%= flash[:error] %>
+	    	</div>
+  		</div>
+		<% end %><br>
+	</div>
+
+<div id="recipe-result">
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+   <!-- End Billboard -->
+
+
+
+     <!-- Start Main Content -->
+
+
+<div class="sec_2">
+<div class="container">
+<div class="row">
+<div class="span6">
+<ul class="thumbnails">
+
+<li class="span2">
+<div class="fancycaption fancycaption-fade">
+<img class="fade" width="150px" src="<%= asset_path("acne.jpg") %>" alt="">
+</div>
+</li>
+
+ <li class="span2">
+ <div class="fancycaption fancycaption-fade">
+ <img class="fade" width="150px" src="<%= asset_path("colds.jpg") %>" alt="">
+ </div>
+ </li>
+
+ <li class="span2">
+ <div class="fancycaption fancycaption-fade">
+ <img class="fade" width="150px" src="<%= asset_path("gout.jpg") %>" alt="">
+ </div>
+ </li>
+ </ul></div>
+ <div class="span6">
+ <h1>vegetables.  yum.</h1>
+ <br>
+ <p class="disclaimer"><strong>obligatory disclaimer:</strong><br>
+    Nutrition is a supplement, not a substitute, for conventional medicine.  Please consider food allergies, carb/fruit sugar content, medicine contraindications, etc. before consuming new foods.  Or ask a <a href="http://www.eatright.org/programs/rdfinder/">Registered Dietitian</a>.</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="billboard">
+<div class="container">
+<div class="row">
+<div class="span4 text-cent">
+<div class="icon-helper">
+<i class="fa-shopping-cart icon-large"></i>
+</div>
+<h2><a href="http://www.localharvest.org/farmers-markets/">Farmers' Market Locator</a></h2>
+<p>Find a greenmarket or CSA near you!  Growers all over the world gather weekly to sell their produce directly to the public.  Shopping at a farmers' market is a great way to meet local farmers and get fresh, flavorful produce.</p>
+</div>
+<div class="span4 text-cent">
+<div class="icon-helper">
+<i class="fa-medkit icon-large"></i>
+</div>
+<h2><a href="http://www.drugs.com/drug_interactions.html">Check for Food Interactions</a></h2>
+<p>Drug interactions occurs when the effect of a particular drug is altered when it is taken with another drug, or with food. Drugs.com provides a simple Drug Interaction Checker that will display any interactions between your chosen drug(s) and food.</p>
+</div>
+<div class="span4 text-cent">
+<div class="icon-helper">
+<i class="fa-heart icon-large"><a href="http://cdn.diabeticlivingonline.com/sites/diabeticlivingonline.com/files/styles/slide/public/CarbsSlide1.jpg?itok=vAFiFCrB"></a></i>
+</div>
+<h2><a href="http://www.umassmed.edu/healthyheart/tipsheets/carbcount.aspx">Carb Content</a></h2> 
+<p>Search for carb content, calories, sugar and other nutritional info for any food.  It's super important to be aware of carb and sugar amounts, as smoothies, even green ones, may contain high levels.  Know your grub! </p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="container">
+<hr>
+
+      <!-- Example row of columns -->
+      <div class="row">
+         <div class="span3">
+        <ul class="thumbnails">
+
+        <li class="span3 span3 fancycaption fancycaption-fade">
+  <img class="fade thumbnail" src="<%= asset_path("what-do-you-expect-hes-an-onion.jpg") %>" alt="" />
+        </li>
+      </ul>
+
+        </div>
+        <div class="span3">
+        <ul class="thumbnails">
+
+        <li class="span3 fancycaption fancycaption-fade">
+
+  <img class="fade thumbnail" src="<%= asset_path("that-crazy-broccoli.jpg") %>" alt="" />
+
+        </li>
+      </ul>
+
+        </div>
+        <div class="span3">
+          <ul class="thumbnails">
+
+        <li class="span3 span3 fancycaption fancycaption-fade">
+  <img class="fade thumbnail" src="<%= asset_path("vegetables-i-hate-pt-3-and-4-1.jpg") %>" alt="" />
+</div>
+        </li>
+      </ul>
+
+        <div class="span3">
+          <ul class="thumbnails">
+
+        <li class="span3 span3 fancycaption fancycaption-fade">
+  <img class="fade thumbnail" src="<%= asset_path("pumpkin-pie.jpeg") %>" alt="" />
+      <hr>
+
+   </li>
+   </ul>
+   </div>
+   </div>
+   <hr>
+
+
+   </div>
+
+   <!-- End Main Content -->
+
+
+     <!-- Start Footer -->
+
+   <div id="footer">
+   <div class="container">
+   <div class="row">
+   <div class="span6">  <p style="padding-top:15px;">&copy; 2014 - Made by <strong><a href="https://github.com/ChavaLovesFyedka">Stephanie</a></h6></strong> at Flatiron School</p></div>
+
+    <div class="span6">  <div style="padding:10px; float:right;" class="btn-group">
+  	<a href="https://www.facebook.com/sharer/sharer.php?u=http://greensmoothie-generator.herokuapp.com/"><button class="btn"><i  class="icon-facebook-sign"></i></button></a>
+	<a href="https://twitter.com/home?status=%23GreenSmoothieGenerator:%20pick%20an%20ailment%20and%20get%20a%20recipe%20w/ingredients%20shown%20to%20improve%20it!%20http://greensmoothie-generator.herokuapp.com"><button class="btn"><i  class="icon-twitter-sign"></i></button></a> </div></div>
+
+</div>
+</div>
+</div>
+
+
+<!-- End Footer -->
+
+
+
+    <!-- Include JQUERY/JAVASCRIPT
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/rand.js"></script>
+    <script src="js/bootstrap/fancyCaption.js"></script>
+
+   <script>
+     $(document).ready(function() {
+
+  $('.shuffle').randomImage({path: 'images/'});
+  $('a:first').click(function() {
+    location.reload();
+    return false;
+  });
+
+});
+
+
+ </script>
+     
+   <script type="text/javascript">
+$(document).ready(function(){
+  $(".fancycaption-fade").fancyCaption({slideTopBar:false, slideBottomBar:false, slideLeftBar:false, slideRightBar:false });
+});
+</script>
+
+
+
+
+
+</body></html>

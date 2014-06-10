@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Green Smoothie Generator</title>
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+
+        <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+        <!--[if lt IE 9]>
+          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+
+       <!-- Include GOOGLE Webfonts -->
+
+       <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+
+
+
+
+        <!-- Include CSS Resources -->
+
+        <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+        <link href="css/theme.css" rel="stylesheet">
+        <link href="css/bootstrap/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="css/font-awesome.css" rel="stylesheet">
+
+
+    </head>
+
+  <body>
+
+
+
+   <!-- Start Navbar -->
+
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="/">Dust off that Nutribullet, people!</a>
+          <div class="nav-collapse">
+          </li>
+            </ul>
+           <ul class="nav pull-right">
+              <li><%= link_to "Home", "/" %></li>
+              <li><a href="http://www.rebootwithjoe.com/eating/a-z-fruit-veggies">Learn</a></li>
+              <li><a href="mailto:athenspie@gmail.com">Contact</a></li>
+            </ul>
+
+
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+
+
+   <!-- End Navbar -->
+
+
+
+
+
+
+     <!-- Start Main Content -->
+
+
+<div class="sec_abt">
+<div class="container">
+<div class="row">
+ <div class="span6">
+ <h1><%= link_to @recipe.name.upcase, @recipe.url, :target => "blank" %></h1>
+ <br>
+
+    <p>Ingredients: </p>
+    <p><%= simple_format(@recipe.description) %></p><br>
+ </p>
+ <div style="padding-left:30px; padding-top:20px;" class="btn-toolbar">
+
+      <button class="btn btn-large"><%= link_to "Meh? Try again for a new recipe >>", "/" %></button>
+       </div>
+
+</div>
+<div class="span6">
+<ul class="thumbnails">
+
+
+
+ <li class="span3">
+ <div class="fancycaption fancycaption-fade">
+ <img class="fade" width="300" src="<%= asset_path("icon_256.png") %>" alt="">
+ </div>
+ </li>
+
+ <li class="span3">
+ <div class="fancycaption fancycaption-fade">
+ <img class="fade" width="300" src="<%= asset_path("vegicon.png") %>" alt="">
+ </div>
+ </li>
+ </ul></div>
+
+</div>
+</div>
+<br>
+<br>
+</div>
+
+
+
+
+
+
+<div class="billboard">
+
+<div class="container">
+<div class="row">
+
+<div class="span4"><ul class="thumbnails">
+        <li class="span4">
+          <a href="#" class="thumbnail">
+            <img src="<%= asset_path("store.jpg") %>" alt="">
+          </a>
+        </li>
+        <li class="span2">
+          <a href="#" class="thumbnail">
+            <img src="<%= asset_path("juices.jpg") %>" alt="">
+          </a>
+        </li>
+        <li class="span2">
+          <a href="#" class="thumbnail">
+            <img src="<%= asset_path("truck.jpg") %>" alt="">
+          </a>
+        </li>
+ 
+      </ul></div>
+<div class="span8"><article>
+  <header>
+    <h2><a href="http://www.rebootwithjoe.com/find-a-juice-bar-in-your-area/">Juice Bar Locator</a></h2>
+  </header>
+
+  <aside>
+    Don't have a fancy blender?  On the go?  Find a juice bar near you.
+  </aside>
+
+  <p>Reboot with Joe offers a cool feature to help you find a juice bar in your area.  The 
+Juice Bar Locator congregates the juice bars closest to you on a map. All you have to do is enter in your location and you’ll be walking out the door to your neighborhood juice bar.  It’s helpful for when you’re at home, at the office, and traveling so you can always have a juice in hand.
+</p>
+  <p>Check out the <a href="http://www.rebootwithjoe.com/find-a-juice-bar-in-your-area/">Juice Bar Locator</a> and Juice On!</p>
+
+</article>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+     <hr style="margin: 18px 0;
+border: 0;
+border-top: 2px dashed #E5E5E5;
+border-bottom: 2px dashed white;">
+
+    <div class="container">
+    <div class="row">
+
+
+        <div class="span8">  <article>
+  <header>
+    <h2><a href="http://www.healwithfood.org/">Heal Your Body With Food!</a></h2>
+  </header>
+
+  <aside>
+    HealWithFood.org provides condition-specific nutrition guides as well as general healthy eating tips to help you make that switch.
+  </aside>
+
+      <p>Daily Tips, Weekly Articles, Superfood Series, Useful Kitchen Tools and Information. Condition specific nutrition guides to 50+ common conditions.</p>
+      <p>Bodyforming:  Abdominal fat, cellulite, excess body fat, overweight, sugar cravings, varicose veins.</p>
+      <p>Skin, hair, nails: acne, psoriasis, wrinkles, eczema, hair loss, bruises.</p>      
+      <p>Digestive: constipation, bloating, hemmorhoids, flatulence, gallstones.</p>
+      <p>Afflictions: cardiovascular, cancer, allergies, rhinitis, asthma, PMS, PCOS, UTI, colds, fever blisters, arthritis, migraines, kidney stones, canker sores, nasal polyps, hives.</p>
+
+</article>
+</div>
+                <div class="span4">  <ul class="thumbnails">
+
+        <li class="span2">
+          <a href="http://www.healwithfood.org/acne/" class="thumbnail">
+            <img src="<%= asset_path("acne-foods.JPG") %>" alt="">
+          </a>
+        </li>
+
+          <li class="span2">
+          <a href="http://www.healwithfood.org/asthma/" class="thumbnail">
+            <img src="<%= asset_path("asthma-foods.gif") %>" alt="">
+          </a>
+        </li>
+         <li class="span4">
+          <a href="http://www.healwithfood.org/" class="thumbnail">
+            <img src="http://www.healwithfood.org/images_recipes/no_image.gif" alt="">
+          </a>
+        </li>
+
+      </ul></div>
+
+
+
+
+    </div>
+    </div>
+
+
+
+
+
+
+
+</div>
+</div>
+
+<div class="container">
+<hr>
+
+      <!-- Example row of columns -->
+ <div class="tabbable tabs-left">
+        <ul class="nav nav-tabs">
+          <li class=""><a href="#lA" data-toggle="tab">Eat</a></li>
+          <li class=""><a href="#lB" data-toggle="tab">These</a></li>
+          <li class="active"><a href="#lC" data-toggle="tab">Foods</a></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane" id="lA">
+
+
+<div class="container"><ul class="thumbnails">
+        <li class="span2">
+          <a href="http://www.healwithfood.org/health-benefits/kale-superfood.php" class="thumbnail">
+            <img src="<%= asset_path("kale2.jpg") %>" alt="">          
+          </a>
+        </li>
+        <li class="span2">
+          <a href="http://www.healwithfood.org/health-benefits/bok-choy-cabbage-leaves.php" class="thumbnail">
+            <img src="<%= asset_path("bokchoy.JPG") %>" alt="">
+          </a>
+        </li>
+        <li class="span2">
+          <a href="http://www.healwithfood.org/medicinal-uses/garlic-healing-properties.php" class="thumbnail">
+            <img src="<%= asset_path("garlic.JPG") %>" alt="">
+          </a>
+        </li>
+        <li class="span2">
+          <a href="http://www.healwithfood.org/health-benefits/broccoli-nutritional.php" class="thumbnail">
+            <img src="<%= asset_path("broccoli.JPG") %>" alt="">
+          </a>
+        </li>
+          <li class="span2">
+          <a href="http://www.healwithfood.org/health-benefits/eating-red-onions.php" class="thumbnail">
+            <img src="<%= asset_path("redonions.JPG") %>" alt="">
+          </a>
+        </li>
+      </ul></div>
+
+          </div>
+          <div class="tab-pane" id="lB">
+
+
+           <div class="container"><ul class="thumbnails">
+        <li class="span2">
+          <a href="http://www.healwithfood.org/health-benefits/romaine-lettuce-cos.php" class="thumbnail">
+            <img src="<%= asset_path("romaine.JPG") %>" alt="">
+          </a>
+        </li>
+        <li class="span2">
+          <a href="http://www.healwithfood.org/superfoods/brussels-sprouts-health-benefits.php" class="thumbnail">
+            <img src="<%= asset_path("brusselssprouts.JPG") %>" alt="">
+          </a>
+        </li>
+        <li class="span2">
+          <a href="http://www.healwithfood.org/health-benefits/pomegranate-seeds-juice.php" class="thumbnail">
+            <img src="<%= asset_path("pomegranate.JPG") %>" alt="">
+          </a>
+        </li>
+        <li class="span2">
+          <a href="http://www.healwithfood.org/health-benefits/mangosteen-fruit-powder.php" class="thumbnail">
+            <img src="<%= asset_path("mangosteen.JPG") %>" alt="">
+          </a>
+        </li>
+          <li class="span2">
+          <a href="http://www.healwithfood.org/health-benefits/purple-carrots-nutrition-vs-orange-cultivars.php" class="thumbnail">
+            <img src="<%= asset_path("purplecarrot.JPG") %>" alt="">
+          </a>
+        </li>
+      </ul></div>
+
+
+          </div>
+          <div class="tab-pane active" id="lC">
+
+
+          <div class="container"><ul class="thumbnails">
+        <li class="span2">
+          <a href="http://www.healwithfood.org/health-benefits/dandelion-greens-edible-leaf-tea.php" class="thumbnail">
+            <img src="<%= asset_path("dandelion.JPG") %>" alt="">
+          </a>
+        </li>
+        <li class="span2">
+          <a href="http://www.healwithfood.org/health-benefits/mustard-greens-anti-cancer-properties.php" class="thumbnail">
+            <img src="<%= asset_path("mustards.JPG") %>" alt="">
+          </a>
+        </li>
+        <li class="span2">
+          <a href="http://www.healwithfood.org/superfoods/collard-greens-health-benefits.php" class="thumbnail">
+            <img src="<%= asset_path("collards.JPG") %>" alt="">
+          </a>
+        </li>
+        <li class="span2">
+          <a href="http://www.healwithfood.org/health-benefits/swiss-chard-nutritional-benefits.php" class="thumbnail">
+            <img src="<%= asset_path("swisschard.JPG") %>" alt="">
+          </a>
+        </li>
+          <li class="span2">
+          <a href="http://www.healwithfood.org/health-benefits/red-cabbage-vs-white.php" class="thumbnail">
+            <img src="<%= asset_path("cabbage.JPG") %>" alt="">
+          </a>
+        </li>
+      </ul></div>
+
+
+
+          </div>
+        </div>
+      </div>
+   </div>
+   <hr>
+
+
+   </div>
+
+   <!-- End Main Content -->
+
+
+     <!-- Start Footer -->
+
+   <div id="footer">
+   <div class="container">
+   <div class="row">
+   <div class="span6">  <p style="padding-top:15px;">&copy; 2014 - Made by <strong><a href="https://github.com/ChavaLovesFyedka">Stephanie</a></h6></strong> at Flatiron School</p></div>
+
+    <div class="span6">  <div style="padding:10px; float:right;" class="btn-group">
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http://greensmoothie-generator.herokuapp.com/"><button class="btn"><i  class="icon-facebook-sign"></i></button></a>
+  <a href="https://twitter.com/home?status=%23GreenSmoothieGenerator:%20pick%20an%20ailment%20and%20get%20a%20recipe%20w/ingredients%20shown%20to%20improve%20it!%20http://greensmoothie-generator.herokuapp.com"><button class="btn"><i  class="icon-twitter-sign"></i></button></a> </div></div>
+
+</div>
+</div>
+</div>
+
+
+<!-- End Footer -->
+
+
+
+    <!-- Include JQUERY/JAVASCRIPT
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/bootstrap/fancyCaption.js"></script>
+
+
+   <script type="text/javascript">
+$(document).ready(function(){
+  $(".fancycaption-fade").fancyCaption({slideTopBar:false, slideBottomBar:false, slideLeftBar:false, slideRightBar:false });
+});
+</script>
+
+
+
+
+
+</body></html>

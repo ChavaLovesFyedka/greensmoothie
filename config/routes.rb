@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
-  get 'recipes/index'
+  resources :ailments
 
-  get 'ailments/index'
+  resources :recipes
 
-  get 'ailments/update'
-
+  root 'ailments#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
