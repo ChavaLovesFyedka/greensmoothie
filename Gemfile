@@ -42,7 +42,7 @@ gem 'spring',        group: :development
 gem "pg"
 
 group :test, :development do
-  gem "sqlite3"
+  # gem "sqlite3"
   gem "pry"
 end
 
