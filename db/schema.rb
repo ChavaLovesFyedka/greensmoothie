@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140506171736) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "ailment_recipes", force: true do |t|
     t.integer  "ailment_id"
     t.integer  "recipe_id"
@@ -20,8 +23,8 @@ ActiveRecord::Schema.define(version: 20140506171736) do
     t.datetime "updated_at"
   end
 
-  add_index "ailment_recipes", ["ailment_id"], name: "index_ailment_recipes_on_ailment_id"
-  add_index "ailment_recipes", ["recipe_id"], name: "index_ailment_recipes_on_recipe_id"
+  add_index "ailment_recipes", ["ailment_id"], name: "index_ailment_recipes_on_ailment_id", using: :btree
+  add_index "ailment_recipes", ["recipe_id"], name: "index_ailment_recipes_on_recipe_id", using: :btree
 
   create_table "ailments", force: true do |t|
     t.string   "name"
