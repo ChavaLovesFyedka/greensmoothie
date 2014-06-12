@@ -14,9 +14,14 @@
  *= require_self
  */
 
-*= require bootstrap
+@import require bootstrap
 */
 
+/*
+ *= require bootstrap_and_overrides
+ */
+
+/* Your stylesheets goes here... */
 /*
  *= require font-awesome
  */
